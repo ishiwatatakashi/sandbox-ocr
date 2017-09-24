@@ -1,0 +1,23 @@
+{
+    "bindings": [
+      {
+          "authLevel": "function",
+          "type": "httpTrigger",
+          "direction": "in",
+          "name": "request"
+      },
+      {
+          "type": "http",
+          "direction": "out",
+          "name": "$return"
+      },
+      {
+          "type": "queue",
+          "name": "outputQueueItem",
+          "queueName": "js-queue-items",
+          "connection": "AzureWebJobsDashboard",
+          "direction": "out"
+      }
+    ],
+    "disabled": false
+}
